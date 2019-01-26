@@ -13,6 +13,7 @@ public class PeacefulState implements State {
         this.mammoth = mammoth;
     }
 
+
     @Override
     public void onEnterState() {
         nyPrint(String.format("%s calms down.", mammoth));
