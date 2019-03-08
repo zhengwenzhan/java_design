@@ -21,7 +21,7 @@ public final class ThreadSafeDoubleCheckLocking {
 
             synchronized (ThreadSafeDoubleCheckLocking.class) {
 
-                //先赋值，不然第二个线程进来的时候会在初始化一遍
+                //result是个局部变量，重新赋值，不然第二个线程进来的时候会在初始化一遍
                 result = instance;
 
                 if (result == null) {
@@ -32,5 +32,4 @@ public final class ThreadSafeDoubleCheckLocking {
         }
         return result;
     }
-
 }
