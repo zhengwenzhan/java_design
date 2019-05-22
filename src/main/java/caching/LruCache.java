@@ -144,6 +144,7 @@ public class LruCache {
             this.capacity = newCapacity;
         }
     }
+
     /**
      * Invalidate cache for user
      */
